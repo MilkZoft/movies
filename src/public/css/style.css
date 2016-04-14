@@ -1,3 +1,46 @@
 body {
+    font-family: sans-serif;
     background-color: #ccc;
+}
+
+header .main-title {
+    font-size: 3em;
+    text-align: center;
+}
+
+header .categories-form {
+    text-align: center;
+}
+
+header .categories-form span {
+    display: block;
+}
+
+.movies {
+    width: 100%;
+    max-width: 700px;
+    margin: 2em auto;
+    -moz-column-count:3;
+    -moz-column-gap: 3%;
+    -moz-column-width: 30%;
+    -webkit-column-count:3;
+    -webkit-column-gap: 3%;
+    -webkit-column-width: 30%;
+    column-count: 3;
+    column-gap: 3%;
+    column-width: 30%;
+}
+
+.movies article {
+    margin-bottom: 20px;
+}
+
+.movies article .title {
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.movies article .thumbnail {
+    width: 200px;
 }

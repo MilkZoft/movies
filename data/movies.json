@@ -3,12 +3,51 @@
         {
             "id": 1,
             "title": "Titanic",
-            "description": "Blala"
+            "description": "Blala",
+            "category": "Drama",
+            "image": "http://howdoesthemovieend.com/images/jmovies/img_pictures/titanic-poster.jpg"
         },
         {
             "id": 2,
             "title": "The Boss",
-            "description": "Lalala"
+            "description": "Lalala",
+            "category": "Comedy",
+            "image": "http://cdn1-www.comingsoon.net/assets/uploads/gallery/boss/boss0005.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Star Wars: The Force Awakens",
+            "description": "Lalala2",
+            "category": "Action",
+            "image": "http://www.dvdsreleasedates.com/posters/300/S/Star-Wars-Episode-VII-The-Force-Awakens-2015.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Revenant",
+            "description": "Lalala",
+            "category": "Action",
+            "image": "http://ia.media-imdb.com/images/M/MV5BMjU4NDExNDM1NF5BMl5BanBnXkFtZTgwMDIyMTgxNzE@._V1_SX640_SY720_.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Spectre: 007",
+            "description": "Lalala",
+            "category": "Action",
+            "image": "https://resizing.flixster.com/bge5cBo2JzPccJcOqW8m5sNPdUg=/800x1185/v1.bTsxMTIwMzM3NDtqOzE3MDQzOzIwNDg7OTYwOzE0MjI"
+        },
+        {
+            "id": 6,
+            "title": "Interestelar",
+            "description": "Lalala",
+            "category": "Action",
+            "image": "http://cinepremiere.impresionesaerea.netdna-cdn.com/noticias/2014/09-septiembre/poster-interestelar.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Miss You Already",
+            "description": "lalala",
+            "category": "Drama",
+            "image": "http://ia.media-imdb.com/images/M/MV5BMjQzNDE1OTM5M15BMl5BanBnXkFtZTgwMTQwMTAwNzE@._V1_UY1200_CR91,0,630,1200_AL_.jpg"
         }
     ]
 }

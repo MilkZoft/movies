@@ -5,11 +5,31 @@
         <link rel="stylesheet" type="text/css" href="public/css/style.css">
     </head>
     <body>
-        <section class="container" ng-controller="MoviesAppController as vm">
-            <ul ng-repeat="movie in vm.movies">
-                <li>{{ movie.title }}</li>
-            </ul>
-        </section>
+        <div ng-controller="MoviesAppController as vm">
+            <header>
+                <p class="main-title">Movies</p>
+
+                <p class="categories-form">
+                    <span>Categories</span>
+
+                    <select
+                        id="category"
+                        class="categories"
+                        size="1"
+                        ng-model="category"
+                        ng-options="item for item in vm.categories"
+                        ng-change="vm.filterByCategory(category)">
+                        <option value="">Show All</option>
+                    </select>
+                </p>
+            </header>
+
+            <section class="movies">
+                <article ng-repeat="movie in vm.filteredMovies" class="clearfix">
+                    <a ng-click="" title="{{ movie.title }}"><img ng-src="{{ movie.image }}" class="thumbnail" /></a>
+                </article>
+            </section>
+        </div>
 
         <script
             type="application/javascript"
