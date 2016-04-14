@@ -5,7 +5,6 @@
     // Loading dependencies
     require([
       'restangular',
-      'movies/movies.constants',
       'movies/movies.controller',
 
       // Services
@@ -17,20 +16,18 @@
     var angular = require('angular');
 
     var moviesApp = angular.module('moviesApp', [
-      'moviesConstants',
       'restangular',
-      'movies.usersService'
+      'movies.moviesService'
     ]);
 
-    moviesApp.config(moviesAppConfig);
+    moviesApp.config(MoviesAppConfig);
 
-    moviesAppConfig.$inject = [
-      '__',
+    MoviesAppConfig.$inject = [
       'RestangularProvider'
     ];
 
-    function MoviesAppConfig(CONFIG, __, RestangularProvider) {
-      RestangularProvider.setBaseUrl(CONFIG.baseApi);
+    function MoviesAppConfig(RestangularProvider) {
+      RestangularProvider.setBaseUrl('http://localhost/movies');
       RestangularProvider.setDefaultHttpFields({
         withCredentials: true
       });

@@ -4,26 +4,18 @@
   require.config({
     paths: {
       // General dependencies
-      'angular': '/bower_components/angular/angular.min',
-      'lodash': '/bower_components/lodash/dist/lodash.min',
-      'restangular': '/bower_components/restangular/dist/restangular.min',
+      'angular': '../bower_components/angular/angular.min',
+      'lodash': '../bower_components/lodash/dist/lodash.min',
+      'restangular': '../bower_components/restangular/dist/restangular.min',
 
-      // Local dependencies
-      'device': '/js/device',
-
-      'devwayApp': 'devway/devway.module'
+      'moviesApp': 'movies/movies.module'
     },
 
     priority: ['angular'],
 
     shim: {
       'angular': {
-        deps: ['jquery'],
         exports: 'angular'
-      },
-
-      'jquery': {
-        exports: '$'
       },
 
       'lodash': {
@@ -34,14 +26,13 @@
         deps: ['angular', 'lodash'],
       },
 
-      'devwayApp': {
+      'moviesApp': {
         deps: ['angular']
       }
     }
   });
 
   require([
-    'device',
-    'devwayApp'
+    'moviesApp'
   ]);
 })();

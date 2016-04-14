@@ -9,6 +9,8 @@
     "angular": "^1.5.3",
     "requirejs": "^2.2.0",
     "requirejs-text": "latest",
-    "requirejs-plugins": "latest"
+    "requirejs-plugins": "latest",
+    "lodash": "latest",
+    "restangular": "latest"
   }
 }
