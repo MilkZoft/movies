@@ -1,30 +1,25 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  define(function(require) {
-    var angular = require('angular');
+    define(function(require) {
+        var angular = require('angular');
 
-    var moviesDataService = angular.module('movies.moviesDataService', [
-      'restangular'
-    ]);
+        angular
+            .module('movies.moviesDataService', [
+                'restangular'
+            ])
+            .factory('moviesDataService', MoviesDataService);
 
-    moviesDataService
-      .factory('moviesDataService', MoviesDataService);
+        MoviesDataService.$inject = [
+            'Restangular'
+        ];
 
-    MoviesDataService.$inject = [
-      'Restangular'
-    ];
-
-    function MoviesDataService(Restangular) {
-      return {
-        getMovies: function() {
-          return Restangular.one('movies.json').get();
+        function MoviesDataService(Restangular) {
+            return {
+                getMovies: function() {
+                    return Restangular.one('data/movies.json').get();
+                }
+            };
         }
-      };
-    }
-
-    moviesDataService.run(['$log', function($log) {
-      $log.info('Inside Movies Service');
-    }]);
-  });
+    });
 })();

@@ -1,23 +1,25 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  define(function(require) {
-    var angular = require('angular');
+    define(function(require) {
+        var angular = require('angular');
 
-    var moviesApp = angular.module('moviesApp');
+        angular
+            .module('moviesApp')
+            .controller('MoviesAppController', MoviesAppController);
 
-    moviesApp.controller('MoviesAppController', MoviesAppController);
+        MoviesAppController.$inject = [
+            'moviesDataService'
+        ];
 
-    MoviesAppController.$inject = [
-      '$scope'
-    ];
+        function MoviesAppController(moviesDataService) {
+            var vm = this;
 
-    function MoviesAppController($scope) {
-      var vm = this;
-    }
-
-    moviesApp.run(['$log', function($log) {
-      $log.info('Inside MoviesAppController');
-    }]);
-  });
+            moviesDataService
+                .getMovies()
+                .then(function(response) {
+                    vm.movies = response.movies;
+                });
+        }
+    });
 })();

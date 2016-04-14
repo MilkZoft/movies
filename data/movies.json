@@ -1,0 +1,14 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "title": "Titanic",
+            "description": "Blala"
+        },
+        {
+            "id": 2,
+            "title": "The Boss",
+            "description": "Lalala"
+        }
+    ]
+}

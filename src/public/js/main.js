@@ -1,38 +1,38 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  require.config({
-    paths: {
-      // General dependencies
-      'angular': '../bower_components/angular/angular.min',
-      'lodash': '../bower_components/lodash/dist/lodash.min',
-      'restangular': '../bower_components/restangular/dist/restangular.min',
+    require.config({
+        paths: {
+            // General dependencies
+            'angular': '../bower_components/angular/angular.min',
+            'lodash': '../bower_components/lodash/dist/lodash.min',
+            'restangular': '../bower_components/restangular/dist/restangular.min',
 
-      'moviesApp': 'movies/movies.module'
-    },
+            'moviesApp': 'movies/movies.module'
+        },
 
-    priority: ['angular'],
+        priority: ['angular'],
 
-    shim: {
-      'angular': {
-        exports: 'angular'
-      },
+        shim: {
+            'angular': {
+                exports: 'angular'
+            },
 
-      'lodash': {
-        exports: '_'
-      },
+            'lodash': {
+                exports: '_'
+            },
 
-      'restangular': {
-        deps: ['angular', 'lodash'],
-      },
+            'restangular': {
+                deps: ['angular', 'lodash'],
+            },
 
-      'moviesApp': {
-        deps: ['angular']
-      }
-    }
-  });
+            'moviesApp': {
+                deps: ['angular']
+            }
+        }
+    });
 
-  require([
-    'moviesApp'
-  ]);
+    require([
+        'moviesApp'
+    ]);
 })();

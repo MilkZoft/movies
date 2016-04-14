@@ -5,8 +5,10 @@
         <link rel="stylesheet" type="text/css" href="public/css/style.css">
     </head>
     <body>
-        <section id="container" ng-controller="MoviesAppController as vm">
-
+        <section class="container" ng-controller="MoviesAppController as vm">
+            <ul ng-repeat="movie in vm.movies">
+                <li>{{ movie.title }}</li>
+            </ul>
         </section>
 
         <script
